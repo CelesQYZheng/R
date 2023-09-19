@@ -1,4 +1,12 @@
-# packages include tidyverse,skimr,janitor
+# import packages
+install.packages("tidyverse")
+install.packages("skimr")
+install.packages("janitor")
+
+library(tidyverse)
+library(skimr)
+library(janitor)
+
 # import data
 bookings_df <- read_csv("hotel_bookings.csv")
 
@@ -26,3 +34,4 @@ num_guests <- bookings_df %>%
 #total canceled bookings
 sum_canceled <-bookings_df %>% 
   summarize(num_canceled = sum(is_canceled),avg_lead_time = mean(lead_time))
+
