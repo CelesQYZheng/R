@@ -7,7 +7,7 @@ penguins %>%
 penguins %>% 
   rename(island_new = island)
 
-#reneme colmns with uppercase
+#rename colmns with uppercase
 rename_with(penguins,toupper)
 
 rename_with(penguins,tolower)
