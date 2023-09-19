@@ -27,3 +27,11 @@ hotel_sum <- bookings_df %>%
   summarise(average_lead_time = mean(lead_time),min_lead_time = min(lead_time),max_leas_time = max(lead_time))
 
 hotel_sum
+
+########################GGPLOT2
+install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(data = bookings_df)+
+  geom_point(mapping=aes(x=stays_in_weekend_nights,y=children))
+
